@@ -29,7 +29,7 @@ class DetailViewController: UITableViewController {
         if let viewModel = viewModel{
             titleLabel.text = viewModel.title
             scoreLabel.text = viewModel.score
-            questionBodyLabel.text = viewModel.body
+            questionBodyLabel.attributedText =  try? NSAttributedString(htmlString: viewModel.body)
             tagsLabel.text = viewModel.tags
             authorNameLabel.text = viewModel.ownerName
             
