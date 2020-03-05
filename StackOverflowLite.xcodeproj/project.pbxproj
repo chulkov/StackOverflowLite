@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		503D92932411221300808B38 /* DetailViewController+TableViewDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 503D92922411221300808B38 /* DetailViewController+TableViewDataSource.swift */; };
+		503D92952411375600808B38 /* Answer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 503D92942411375600808B38 /* Answer.swift */; };
+		503D929724114BE700808B38 /* AnswersTableViewCellModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 503D929624114BE700808B38 /* AnswersTableViewCellModel.swift */; };
 		509D5424240FA1530095A91F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 509D5423240FA1530095A91F /* AppDelegate.swift */; };
 		509D5426240FA1530095A91F /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 509D5425240FA1530095A91F /* SceneDelegate.swift */; };
 		509D5428240FA1530095A91F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 509D5427240FA1530095A91F /* ViewController.swift */; };
@@ -35,6 +37,8 @@
 
 /* Begin PBXFileReference section */
 		503D92922411221300808B38 /* DetailViewController+TableViewDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DetailViewController+TableViewDataSource.swift"; sourceTree = "<group>"; };
+		503D92942411375600808B38 /* Answer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Answer.swift; sourceTree = "<group>"; };
+		503D929624114BE700808B38 /* AnswersTableViewCellModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnswersTableViewCellModel.swift; sourceTree = "<group>"; };
 		509D5420240FA1530095A91F /* StackOverflowLite.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = StackOverflowLite.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		509D5423240FA1530095A91F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		509D5425240FA1530095A91F /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -139,6 +143,7 @@
 				509D5465241009900095A91F /* Question.swift */,
 				509D546724100A490095A91F /* Response.swift */,
 				509D542C240FA1530095A91F /* StackOverflowLite.xcdatamodeld */,
+				503D92942411375600808B38 /* Answer.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -148,6 +153,7 @@
 			children = (
 				509D543A240FA1D10095A91F /* ViewControllerViewModel.swift */,
 				509D546924100D5A0095A91F /* QuestionsColletionViewCellModel.swift */,
+				503D929624114BE700808B38 /* AnswersTableViewCellModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -244,6 +250,8 @@
 				509D5462241007E70095A91F /* EndpointType.swift in Sources */,
 				509D5466241009900095A91F /* Question.swift in Sources */,
 				509D543B240FA1D10095A91F /* ViewControllerViewModel.swift in Sources */,
+				503D929724114BE700808B38 /* AnswersTableViewCellModel.swift in Sources */,
+				503D92952411375600808B38 /* Answer.swift in Sources */,
 				509D546824100A490095A91F /* Response.swift in Sources */,
 				509D545A240FE0B80095A91F /* UIImage+Decompression.swift in Sources */,
 				509D5464241007E70095A91F /* Networking.swift in Sources */,

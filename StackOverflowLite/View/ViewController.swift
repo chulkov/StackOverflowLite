@@ -42,9 +42,9 @@ class ViewController: UIViewController {
             
             if let destinationViewController = segue.destination as? DetailViewController
             {
-                let indexPath = self.collectionView.indexPathsForSelectedItems?.first// self.collectionView.indexPath(for: <#T##UICollectionViewCell#>)
+                let indexPath = self.collectionView.indexPathsForSelectedItems?.first
                 let index = indexPath?.row
-                destinationViewController.viewModel = viewModel.cellViewModel(index: index ?? 0)
+                destinationViewController.questionsViewModel = viewModel.cellCollectionViewModel(index: index ?? 0)
             }
         }
         

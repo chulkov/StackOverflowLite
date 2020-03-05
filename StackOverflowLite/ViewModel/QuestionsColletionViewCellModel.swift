@@ -1,11 +1,3 @@
-//
-//  RepoTableViewCellModel.swift
-//  NetworkingLayer
-//
-//  Created by Arturs Derkintis on 01/11/2017.
-//  Copyright © 2017 Arturs Derkintis. All rights reserved.
-//
-
 import Foundation
 
 class QuestionsColletionViewCellModel {
@@ -42,5 +34,8 @@ class QuestionsColletionViewCellModel {
     }
     var body: String{
         return question.body
+    }
+    var questionID: Int{
+        return question.questionID
     }
 }

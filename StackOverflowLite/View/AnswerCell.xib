@@ -9,29 +9,32 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="KGk-i7-Jjw" customClass="AnswerCell" customModule="StackOverflowLite" customModuleProvider="target">
-            <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="120" id="KGk-i7-Jjw" customClass="AnswerCell" customModule="StackOverflowLite" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="120"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
-                <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                <rect key="frame" x="0.0" y="0.0" width="320" height="120"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Answer" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ch8-1q-Gdj">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Answer" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ch8-1q-Gdj">
+                        <rect key="frame" x="10" y="5" width="300" height="110"/>
                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
                 </subviews>
                 <constraints>
-                    <constraint firstAttribute="bottom" secondItem="ch8-1q-Gdj" secondAttribute="bottom" id="49h-iB-tbP"/>
-                    <constraint firstAttribute="trailing" secondItem="ch8-1q-Gdj" secondAttribute="trailing" id="OqA-1j-R5h"/>
-                    <constraint firstItem="ch8-1q-Gdj" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="iVo-PC-zxb"/>
-                    <constraint firstItem="ch8-1q-Gdj" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="rc9-j8-I56"/>
+                    <constraint firstAttribute="bottom" secondItem="ch8-1q-Gdj" secondAttribute="bottom" constant="5" id="ABC-Yi-juZ"/>
+                    <constraint firstItem="ch8-1q-Gdj" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="5" id="Bwq-nv-Ylg"/>
+                    <constraint firstItem="ch8-1q-Gdj" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="10" id="lQK-JW-0XR"/>
+                    <constraint firstAttribute="trailing" secondItem="ch8-1q-Gdj" secondAttribute="trailing" constant="10" id="yGp-jc-WXD"/>
                 </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
-            <point key="canvasLocation" x="133" y="109"/>
+            <connections>
+                <outlet property="answerBodyLabel" destination="ch8-1q-Gdj" id="kAh-je-wvW"/>
+            </connections>
+            <point key="canvasLocation" x="131.8840579710145" y="133.92857142857142"/>
         </tableViewCell>
     </objects>
 </document>

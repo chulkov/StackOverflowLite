@@ -1,12 +1,12 @@
 import UIKit
 
 class InspirationCell: UICollectionViewCell {
-  static let reuseIdentifier = String(describing: InspirationCell.self)
-  
-  @IBOutlet private weak var titleLabel: UILabel!
-  @IBOutlet private weak var authorNameLabel: UILabel!
-  @IBOutlet private weak var tagsLabel: UILabel!
-  @IBOutlet weak var avatarImageView: UIImageView!
+    static let reuseIdentifier = String(describing: InspirationCell.self)
+    
+    @IBOutlet private weak var titleLabel: UILabel!
+    @IBOutlet private weak var authorNameLabel: UILabel!
+    @IBOutlet private weak var tagsLabel: UILabel!
+    @IBOutlet weak var avatarImageView: UIImageView!
     
     
     public var viewModel: QuestionsColletionViewCellModel? {
@@ -18,25 +18,21 @@ class InspirationCell: UICollectionViewCell {
             avatarImageView.imageFromServerURL(urlString: viewModel.profileImageURL)
         }
     }
-
-  
-  override func apply(_ layoutAttributes: UICollectionViewLayoutAttributes) {
-    super.apply(layoutAttributes)
     
-    let featuredHeight = UltravisualLayoutConstants.Cell.featuredHeight
-    let standardHeight = UltravisualLayoutConstants.Cell.standardHeight
     
-    let delta = 1 - ((featuredHeight - frame.height) / (featuredHeight - standardHeight))
-    
-    let minAlpha: CGFloat = 0.3
-    let maxAlpha: CGFloat = 0.75
-    
-    //imageCoverView.alpha = maxAlpha - (delta * (maxAlpha - minAlpha))
-    let scale = max(delta, 0.9)
-    titleLabel.transform = CGAffineTransform(scaleX: scale, y: scale)
-    
-    avatarImageView.alpha = delta
-    authorNameLabel.alpha = delta
-                tagsLabel.alpha = delta
-  }
+    override func apply(_ layoutAttributes: UICollectionViewLayoutAttributes) {
+        super.apply(layoutAttributes)
+        
+        let featuredHeight = UltravisualLayoutConstants.Cell.featuredHeight
+        let standardHeight = UltravisualLayoutConstants.Cell.standardHeight
+        
+        let delta = 1 - ((featuredHeight - frame.height) / (featuredHeight - standardHeight))
+        
+        let scale = max(delta, 0.9)
+        titleLabel.transform = CGAffineTransform(scaleX: scale, y: scale)
+        
+        avatarImageView.alpha = delta
+        authorNameLabel.alpha = delta
+        tagsLabel.alpha = delta
+    }
 }

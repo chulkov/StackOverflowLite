@@ -11,6 +11,7 @@ import Foundation
 enum StackOverflowAPI {
     case questions
     case user(login: String)
+    case answers(questionID: Int)
 }
 
 extension StackOverflowAPI: EndpointType {
@@ -24,6 +25,9 @@ extension StackOverflowAPI: EndpointType {
             return "/questions?site=stackoverflow&filter=withbody"
         case .user(let login):
             return "/users/\(login)"
+        case .answers(let questionID):
+            return "/questions/\(String(questionID))?site=stackoverflow&filter=!-y(KwOdKR5Ga7mmruVArx2SJykc-M)3jKiDQBk1fq"
         }
+        
     }
 }

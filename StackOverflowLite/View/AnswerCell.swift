@@ -10,6 +10,7 @@ import UIKit
 
 class AnswerCell: UITableViewCell {
 
+    @IBOutlet weak var answerBodyLabel: UILabel!
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
@@ -19,6 +20,15 @@ class AnswerCell: UITableViewCell {
         super.setSelected(selected, animated: animated)
 
         // Configure the view for the selected state
+    }
+    
+    public var viewModel: AnswersTableViewCellModel? {
+        didSet {
+            guard let viewModel = viewModel else { return }
+            
+            answerBodyLabel.text = viewModel.body
+            answerBodyLabel.attributedText =  try? NSAttributedString(htmlString: viewModel.body)
+        }
     }
     
 }

@@ -20,8 +20,9 @@ extension DetailViewController  {
     }
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-                if section == 1 {
-            return 5
+        if section == 1 {
+            print("answer numberOfRowsInSection   \(viewModel.answersCount)")
+            return viewModel.answersCount
             //the datasource of the dynamic section
         }
         return super.tableView(tableView, numberOfRowsInSection: section)
@@ -32,14 +33,14 @@ extension DetailViewController  {
         if indexPath.section == 1 {
             let cell = tableView.dequeueReusableCell(withIdentifier: "AnswerCell") as! AnswerCell
             
-            
+            cell.viewModel = viewModel.cellTableViewModel(index: indexPath.row)
             return cell
         }
         return super.tableView(tableView, cellForRowAt: indexPath)
     }
     
     override func tableView(_ tableView: UITableView, indentationLevelForRowAt indexPath: IndexPath) -> Int {
-                if indexPath.section == 1 {
+        if indexPath.section == 1 {
             let newIndexPath = IndexPath(row: 0, section: indexPath.section)
             return super.tableView(tableView, indentationLevelForRowAt: newIndexPath)
         }
@@ -48,9 +49,9 @@ extension DetailViewController  {
     
     
     override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        if indexPath.section == 1 {
-            return 44
-        }
+//        if indexPath.section == 1 {
+//            return 44
+//        }
         return super.tableView(tableView, heightForRowAt: indexPath)
     }
     
