@@ -91,3 +91,35 @@ extension NSAttributedString {
     }
 
 }
+
+extension String {
+
+    func stripOutHtml() -> String? {
+        do {
+            guard let data = self.data(using: .unicode) else {
+                return nil
+            }
+            let attributed = try NSAttributedString(data: data, options: [.documentType: NSAttributedString.DocumentType.html, .characterEncoding: String.Encoding.utf8.rawValue], documentAttributes: nil)
+            return attributed.string
+        } catch {
+            return nil
+        }
+    }
+}
+
+extension UIImageView {
+public func imageFromServerURL(urlString: String) {
+    self.image = nil
+    URLSession.shared.dataTask(with: NSURL(string: urlString)! as URL, completionHandler: { (data, response, error) -> Void in
+
+        if error != nil {
+            print(error)
+            return
+        }
+        DispatchQueue.main.async(execute: { () -> Void in
+            let image = UIImage(data: data!)
+            self.image = image
+        })
+
+    }).resume()
+}}

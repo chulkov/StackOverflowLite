@@ -3,8 +3,6 @@ import UIKit
 class InspirationCell: UICollectionViewCell {
   static let reuseIdentifier = String(describing: InspirationCell.self)
   
-  @IBOutlet private weak var imageView: UIImageView!
-  @IBOutlet private weak var imageCoverView: UIView!
   @IBOutlet private weak var titleLabel: UILabel!
   @IBOutlet private weak var authorNameLabel: UILabel!
   @IBOutlet private weak var tagsLabel: UILabel!
@@ -17,6 +15,7 @@ class InspirationCell: UICollectionViewCell {
             titleLabel.text = viewModel.title
             authorNameLabel.text = viewModel.ownerName
             tagsLabel.text = viewModel.tags
+            avatarImageView.imageFromServerURL(urlString: viewModel.profileImageURL)
         }
     }
 

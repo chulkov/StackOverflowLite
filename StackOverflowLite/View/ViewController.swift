@@ -44,10 +44,6 @@ class ViewController: UIViewController {
             {
                 let indexPath = self.collectionView.indexPathsForSelectedItems?.first// self.collectionView.indexPath(for: <#T##UICollectionViewCell#>)
                 let index = indexPath?.row
-                // #2 - The ViewModel is the app's de facto data source.
-                // The ViewModel data for the currently-selected table
-                // view cell representing a Messier object is passed to
-                // a detail view controller via a segue.
                 destinationViewController.viewModel = viewModel.cellViewModel(index: index ?? 0)
             }
         }

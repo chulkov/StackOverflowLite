@@ -27,12 +27,12 @@ class DetailViewController: UITableViewController {
         super.viewDidLoad()
         
         if let viewModel = viewModel{
-            titleLabel.text = viewModel.title
+            titleLabel.text = viewModel.title.stripOutHtml()
             scoreLabel.text = viewModel.score
             questionBodyLabel.attributedText =  try? NSAttributedString(htmlString: viewModel.body)
             tagsLabel.text = viewModel.tags
             authorNameLabel.text = viewModel.ownerName
-            
+            avatarImage.imageFromServerURL(urlString: viewModel.profileImageURL)
         }
         
         tableView.register(UINib(nibName: "AnswerCell", bundle: nil), forCellReuseIdentifier: "AnswerCell")

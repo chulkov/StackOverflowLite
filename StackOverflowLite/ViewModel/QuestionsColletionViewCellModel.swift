@@ -34,8 +34,8 @@ class QuestionsColletionViewCellModel {
         return String(tagsLabelText.dropLast(2))
     }
 
-    var profileImageURL: URL? {
-        return URL(string: question.owner.profileImage ?? "")
+    var profileImageURL: String {
+        return question.owner.profileImage ?? ""
     }
     var score: String{
         return  String(question.score)
