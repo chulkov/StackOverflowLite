@@ -6,8 +6,8 @@ class InspirationCell: UICollectionViewCell {
   @IBOutlet private weak var imageView: UIImageView!
   @IBOutlet private weak var imageCoverView: UIView!
   @IBOutlet private weak var titleLabel: UILabel!
-  @IBOutlet private weak var timeAndRoomLabel: UILabel!
-  @IBOutlet private weak var speakerLabel: UILabel!
+  @IBOutlet private weak var authorNameLabel: UILabel!
+  @IBOutlet private weak var tagsLabel: UILabel!
   @IBOutlet weak var avatarImageView: UIImageView!
     
     
@@ -15,13 +15,8 @@ class InspirationCell: UICollectionViewCell {
         didSet {
             guard let viewModel = viewModel else { return }
             titleLabel.text = viewModel.title
-            timeAndRoomLabel.text = viewModel.ownerName
-            var tagsLabelText = ""
-            for tag in viewModel.tags{
-                tagsLabelText.append("\(tag), ")
-            }
-            speakerLabel.text = String(tagsLabelText.dropLast(2))
-            //speakerLabel.text = viewModel.language
+            authorNameLabel.text = viewModel.ownerName
+            tagsLabel.text = viewModel.tags
         }
     }
 
@@ -42,7 +37,7 @@ class InspirationCell: UICollectionViewCell {
     titleLabel.transform = CGAffineTransform(scaleX: scale, y: scale)
     
     avatarImageView.alpha = delta
-    timeAndRoomLabel.alpha = delta
-    speakerLabel.alpha = delta
+    authorNameLabel.alpha = delta
+                tagsLabel.alpha = delta
   }
 }

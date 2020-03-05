@@ -21,7 +21,7 @@ extension StackOverflowAPI: EndpointType {
     var path: String {
         switch self {
         case .questions:
-            return "/questions?site=stackoverflow"
+            return "/questions?site=stackoverflow&filter=withbody"
         case .user(let login):
             return "/users/\(login)"
         }

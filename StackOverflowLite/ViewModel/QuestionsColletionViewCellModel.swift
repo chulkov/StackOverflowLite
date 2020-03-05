@@ -24,11 +24,23 @@ class QuestionsColletionViewCellModel {
         return question.owner.displayName
     }
 
-    var tags: [String] {
-        return question.tags
+    var tags: String {
+        
+        var tagsLabelText = ""
+        for tag in question.tags{
+            tagsLabelText.append("\(tag), ")
+        }
+        
+        return String(tagsLabelText.dropLast(2))
     }
 
-    var profileImage: String {
-        return question.owner.profileImage ?? ""
+    var profileImageURL: URL? {
+        return URL(string: question.owner.profileImage ?? "")
+    }
+    var score: String{
+        return  String(question.score)
+    }
+    var body: String{
+        return question.body
     }
 }

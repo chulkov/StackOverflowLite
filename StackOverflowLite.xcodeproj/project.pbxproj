@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		503D92932411221300808B38 /* DetailViewController+TableViewDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 503D92922411221300808B38 /* DetailViewController+TableViewDataSource.swift */; };
 		509D5424240FA1530095A91F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 509D5423240FA1530095A91F /* AppDelegate.swift */; };
 		509D5426240FA1530095A91F /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 509D5425240FA1530095A91F /* SceneDelegate.swift */; };
 		509D5428240FA1530095A91F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 509D5427240FA1530095A91F /* ViewController.swift */; };
@@ -33,6 +34,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		503D92922411221300808B38 /* DetailViewController+TableViewDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DetailViewController+TableViewDataSource.swift"; sourceTree = "<group>"; };
 		509D5420240FA1530095A91F /* StackOverflowLite.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = StackOverflowLite.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		509D5423240FA1530095A91F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		509D5425240FA1530095A91F /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -125,6 +127,7 @@
 				509D5442240FB2260095A91F /* CustomCollectionViewLayout.swift */,
 				509D5455240FDFBC0095A91F /* InspirationCell.swift */,
 				50FD42AF2410E16800CBF467 /* DetailViewController.swift */,
+				503D92922411221300808B38 /* DetailViewController+TableViewDataSource.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -250,6 +253,7 @@
 				50FD42B02410E16800CBF467 /* DetailViewController.swift in Sources */,
 				50FD42B52410F49F00CBF467 /* AnswerCell.swift in Sources */,
 				509D5453240FDF440095A91F /* Session.swift in Sources */,
+				503D92932411221300808B38 /* DetailViewController+TableViewDataSource.swift in Sources */,
 				509D542E240FA1530095A91F /* StackOverflowLite.xcdatamodeld in Sources */,
 				509D5456240FDFBC0095A91F /* InspirationCell.swift in Sources */,
 				509D546A24100D5A0095A91F /* QuestionsColletionViewCellModel.swift in Sources */,

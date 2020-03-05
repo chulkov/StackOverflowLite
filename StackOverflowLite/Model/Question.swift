@@ -33,6 +33,7 @@ struct Item: Codable {
     let questionID: Int
     let link: String
     let title: String
+    let body: String
     let acceptedAnswerID, closedDate: Int?
     let closedReason: String?
 
@@ -46,7 +47,7 @@ struct Item: Codable {
         case creationDate = "creation_date"
         case lastEditDate = "last_edit_date"
         case questionID = "question_id"
-        case link, title
+        case link, title, body
         case acceptedAnswerID = "accepted_answer_id"
         case closedDate = "closed_date"
         case closedReason = "closed_reason"
