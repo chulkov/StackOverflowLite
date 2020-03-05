@@ -14,10 +14,10 @@ import UIKit
 class ViewControllerViewModel: NSObject {
     
     private let networking = Networking()
-    
+
     private var questions: Question?
     weak var customDelegate: CustomCollectionViewDelegate?
-    let inspirations = Inspiration.allInspirations()
+    //let inspirations = Inspiration.allInspirations()
     
     
     public func getQuestions(completion: (() -> Void)?) {
@@ -57,6 +57,19 @@ extension ViewControllerViewModel: UICollectionViewDataSource{
         return cell
     }
     
+    
+}
+extension ViewControllerViewModel: UICollectionViewDelegate{
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        
+        
+        collectionView.selectItem(at: indexPath, animated: true, scrollPosition: .bottom)
+        
+//        var detailVC: DetailViewController?
+//       // detailVC?.viewModel = cellViewModel(index: indexPath.row)
+//        detailVC?.text = "wow text"
+//        detailVC?.performSegue(withIdentifier: "DetailSegue", sender: "text")
+    }
 }
 
 // MARK: asynchronous networking code

@@ -8,7 +8,7 @@ class InspirationCell: UICollectionViewCell {
   @IBOutlet private weak var titleLabel: UILabel!
   @IBOutlet private weak var timeAndRoomLabel: UILabel!
   @IBOutlet private weak var speakerLabel: UILabel!
-  
+  @IBOutlet weak var avatarImageView: UIImageView!
     
     
     public var viewModel: QuestionsColletionViewCellModel? {
@@ -16,20 +16,15 @@ class InspirationCell: UICollectionViewCell {
             guard let viewModel = viewModel else { return }
             titleLabel.text = viewModel.title
             timeAndRoomLabel.text = viewModel.ownerName
+            var tagsLabelText = ""
+            for tag in viewModel.tags{
+                tagsLabelText.append("\(tag), ")
+            }
+            speakerLabel.text = String(tagsLabelText.dropLast(2))
             //speakerLabel.text = viewModel.language
         }
     }
-    
-  var inspiration: Inspiration? {
-    didSet {
-      if let inspiration = inspiration {
-        imageView.image = inspiration.backgroundImage
-        titleLabel.text = inspiration.title
-        timeAndRoomLabel.text = inspiration.roomAndTime
-        speakerLabel.text = inspiration.speaker
-      }
-    }
-  }
+
   
   override func apply(_ layoutAttributes: UICollectionViewLayoutAttributes) {
     super.apply(layoutAttributes)
@@ -42,11 +37,11 @@ class InspirationCell: UICollectionViewCell {
     let minAlpha: CGFloat = 0.3
     let maxAlpha: CGFloat = 0.75
     
-    imageCoverView.alpha = maxAlpha - (delta * (maxAlpha - minAlpha))
-    
-    let scale = max(delta, 0.5)
+    //imageCoverView.alpha = maxAlpha - (delta * (maxAlpha - minAlpha))
+    let scale = max(delta, 0.9)
     titleLabel.transform = CGAffineTransform(scaleX: scale, y: scale)
     
+    avatarImageView.alpha = delta
     timeAndRoomLabel.alpha = delta
     speakerLabel.alpha = delta
   }

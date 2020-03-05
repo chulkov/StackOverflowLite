@@ -17,10 +17,7 @@
 		509D543B240FA1D10095A91F /* ViewControllerViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 509D543A240FA1D10095A91F /* ViewControllerViewModel.swift */; };
 		509D5441240FB17F0095A91F /* CustomCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 509D5440240FB17F0095A91F /* CustomCollectionViewCell.swift */; };
 		509D5443240FB2260095A91F /* CustomCollectionViewLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 509D5442240FB2260095A91F /* CustomCollectionViewLayout.swift */; };
-		509D544D240FDDD90095A91F /* Inspirations.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 509D544B240FDDD90095A91F /* Inspirations.xcassets */; };
-		509D544E240FDDD90095A91F /* Inspirations.plist in Resources */ = {isa = PBXBuildFile; fileRef = 509D544C240FDDD90095A91F /* Inspirations.plist */; };
 		509D5453240FDF440095A91F /* Session.swift in Sources */ = {isa = PBXBuildFile; fileRef = 509D5451240FDF440095A91F /* Session.swift */; };
-		509D5454240FDF440095A91F /* Inspiration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 509D5452240FDF440095A91F /* Inspiration.swift */; };
 		509D5456240FDFBC0095A91F /* InspirationCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 509D5455240FDFBC0095A91F /* InspirationCell.swift */; };
 		509D5459240FE0B80095A91F /* UIColor+Palette.swift in Sources */ = {isa = PBXBuildFile; fileRef = 509D5457240FE0B70095A91F /* UIColor+Palette.swift */; };
 		509D545A240FE0B80095A91F /* UIImage+Decompression.swift in Sources */ = {isa = PBXBuildFile; fileRef = 509D5458240FE0B70095A91F /* UIImage+Decompression.swift */; };
@@ -30,6 +27,7 @@
 		509D5466241009900095A91F /* Question.swift in Sources */ = {isa = PBXBuildFile; fileRef = 509D5465241009900095A91F /* Question.swift */; };
 		509D546824100A490095A91F /* Response.swift in Sources */ = {isa = PBXBuildFile; fileRef = 509D546724100A490095A91F /* Response.swift */; };
 		509D546A24100D5A0095A91F /* QuestionsColletionViewCellModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 509D546924100D5A0095A91F /* QuestionsColletionViewCellModel.swift */; };
+		50FD42B02410E16800CBF467 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50FD42AF2410E16800CBF467 /* DetailViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -45,10 +43,7 @@
 		509D543A240FA1D10095A91F /* ViewControllerViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerViewModel.swift; sourceTree = "<group>"; };
 		509D5440240FB17F0095A91F /* CustomCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomCollectionViewCell.swift; sourceTree = "<group>"; };
 		509D5442240FB2260095A91F /* CustomCollectionViewLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomCollectionViewLayout.swift; sourceTree = "<group>"; };
-		509D544B240FDDD90095A91F /* Inspirations.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Inspirations.xcassets; sourceTree = "<group>"; };
-		509D544C240FDDD90095A91F /* Inspirations.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Inspirations.plist; sourceTree = "<group>"; };
 		509D5451240FDF440095A91F /* Session.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Session.swift; sourceTree = "<group>"; };
-		509D5452240FDF440095A91F /* Inspiration.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Inspiration.swift; sourceTree = "<group>"; };
 		509D5455240FDFBC0095A91F /* InspirationCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InspirationCell.swift; sourceTree = "<group>"; };
 		509D5457240FE0B70095A91F /* UIColor+Palette.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIColor+Palette.swift"; sourceTree = "<group>"; };
 		509D5458240FE0B70095A91F /* UIImage+Decompression.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIImage+Decompression.swift"; sourceTree = "<group>"; };
@@ -58,6 +53,7 @@
 		509D5465241009900095A91F /* Question.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Question.swift; sourceTree = "<group>"; };
 		509D546724100A490095A91F /* Response.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Response.swift; sourceTree = "<group>"; };
 		509D546924100D5A0095A91F /* QuestionsColletionViewCellModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QuestionsColletionViewCellModel.swift; sourceTree = "<group>"; };
+		50FD42AF2410E16800CBF467 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -122,6 +118,7 @@
 				509D5440240FB17F0095A91F /* CustomCollectionViewCell.swift */,
 				509D5442240FB2260095A91F /* CustomCollectionViewLayout.swift */,
 				509D5455240FDFBC0095A91F /* InspirationCell.swift */,
+				50FD42AF2410E16800CBF467 /* DetailViewController.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -129,7 +126,6 @@
 		509D543E240FA1FE0095A91F /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				509D5452240FDF440095A91F /* Inspiration.swift */,
 				509D5451240FDF440095A91F /* Session.swift */,
 				509D5465241009900095A91F /* Question.swift */,
 				509D546724100A490095A91F /* Response.swift */,
@@ -150,8 +146,6 @@
 		509D544A240FDDC50095A91F /* Assets */ = {
 			isa = PBXGroup;
 			children = (
-				509D544C240FDDD90095A91F /* Inspirations.plist */,
-				509D544B240FDDD90095A91F /* Inspirations.xcassets */,
 			);
 			path = Assets;
 			sourceTree = "<group>";
@@ -224,8 +218,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				509D544E240FDDD90095A91F /* Inspirations.plist in Resources */,
-				509D544D240FDDD90095A91F /* Inspirations.xcassets in Resources */,
 				509D5433240FA1550095A91F /* LaunchScreen.storyboard in Resources */,
 				509D5430240FA1550095A91F /* Assets.xcassets in Resources */,
 				509D542B240FA1530095A91F /* Main.storyboard in Resources */,
@@ -248,10 +240,10 @@
 				509D5441240FB17F0095A91F /* CustomCollectionViewCell.swift in Sources */,
 				509D5428240FA1530095A91F /* ViewController.swift in Sources */,
 				509D5424240FA1530095A91F /* AppDelegate.swift in Sources */,
+				50FD42B02410E16800CBF467 /* DetailViewController.swift in Sources */,
 				509D5453240FDF440095A91F /* Session.swift in Sources */,
 				509D542E240FA1530095A91F /* StackOverflowLite.xcdatamodeld in Sources */,
 				509D5456240FDFBC0095A91F /* InspirationCell.swift in Sources */,
-				509D5454240FDF440095A91F /* Inspiration.swift in Sources */,
 				509D546A24100D5A0095A91F /* QuestionsColletionViewCellModel.swift in Sources */,
 				509D5426240FA1530095A91F /* SceneDelegate.swift in Sources */,
 				509D5459240FE0B80095A91F /* UIColor+Palette.swift in Sources */,
