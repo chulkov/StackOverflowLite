@@ -9,7 +9,7 @@
 import Foundation
 
 // MARK: - Question
-struct Questions: Codable {
+struct Question: Codable {
     let items: [Item]
     let hasMore: Bool
     let quotaMax, quotaRemaining: Int

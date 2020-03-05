@@ -28,7 +28,7 @@ class QuestionsColletionViewCellModel {
         return question.tags
     }
 
-    var language: String {
+    var profileImage: String {
         return question.owner.profileImage ?? ""
     }
 }

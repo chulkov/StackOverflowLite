@@ -8,20 +8,20 @@
 
 import Foundation
 
-enum GitHubAPI {
-    case repositories(language: String)
+enum StackOverflowAPI {
+    case questions
     case user(login: String)
 }
 
-extension GitHubAPI: EndpointType {
+extension StackOverflowAPI: EndpointType {
     var baseURL: URL {
-        return URL(string: "https://api.github.com")!
+        return URL(string: "https://api.stackexchange.com")!
     }
 
     var path: String {
         switch self {
-        case .repositories(let language):
-            return "/search/repositories?q=+language:\(language)&sort=stars&order=desc"
+        case .questions:
+            return "/questions?site=stackoverflow"
         case .user(let login):
             return "/users/\(login)"
         }

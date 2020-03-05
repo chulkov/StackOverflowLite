@@ -11,7 +11,7 @@ import Foundation
 
 struct Networking {
 
-    func performNetworkTask<T: Codable>(endpoint: GitHubAPI,
+    func performNetworkTask<T: Codable>(endpoint: StackOverflowAPI,
                                         type: T.Type,
                                         completion: ((_ response: T) -> Void)?) {
         let urlString = endpoint.baseURL.appendingPathComponent(endpoint.path).absoluteString.removingPercentEncoding
