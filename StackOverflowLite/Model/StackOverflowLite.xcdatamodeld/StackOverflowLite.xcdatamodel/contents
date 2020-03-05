@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="15702" systemVersion="18F132" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
+    <entity name="ProfileTEST" representedClassName="ProfileTEST" syncable="YES" codeGenerationType="class"/>
+    <entity name="QuestionTEST" representedClassName="QuestionTEST" syncable="YES" codeGenerationType="class"/>
+    <elements>
+        <element name="ProfileTEST" positionX="-45" positionY="0" width="128" height="43"/>
+        <element name="QuestionTEST" positionX="-18" positionY="27" width="128" height="43"/>
+    </elements>
+</model>
