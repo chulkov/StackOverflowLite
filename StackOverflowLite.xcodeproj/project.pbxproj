@@ -28,6 +28,8 @@
 		509D546824100A490095A91F /* Response.swift in Sources */ = {isa = PBXBuildFile; fileRef = 509D546724100A490095A91F /* Response.swift */; };
 		509D546A24100D5A0095A91F /* QuestionsColletionViewCellModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 509D546924100D5A0095A91F /* QuestionsColletionViewCellModel.swift */; };
 		50FD42B02410E16800CBF467 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50FD42AF2410E16800CBF467 /* DetailViewController.swift */; };
+		50FD42B52410F49F00CBF467 /* AnswerCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50FD42B32410F49F00CBF467 /* AnswerCell.swift */; };
+		50FD42B62410F49F00CBF467 /* AnswerCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 50FD42B42410F49F00CBF467 /* AnswerCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -54,6 +56,8 @@
 		509D546724100A490095A91F /* Response.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Response.swift; sourceTree = "<group>"; };
 		509D546924100D5A0095A91F /* QuestionsColletionViewCellModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QuestionsColletionViewCellModel.swift; sourceTree = "<group>"; };
 		50FD42AF2410E16800CBF467 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
+		50FD42B32410F49F00CBF467 /* AnswerCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnswerCell.swift; sourceTree = "<group>"; };
+		50FD42B42410F49F00CBF467 /* AnswerCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AnswerCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -113,6 +117,8 @@
 		509D543D240FA1ED0095A91F /* View */ = {
 			isa = PBXGroup;
 			children = (
+				50FD42B32410F49F00CBF467 /* AnswerCell.swift */,
+				50FD42B42410F49F00CBF467 /* AnswerCell.xib */,
 				509D5429240FA1530095A91F /* Main.storyboard */,
 				509D5427240FA1530095A91F /* ViewController.swift */,
 				509D5440240FB17F0095A91F /* CustomCollectionViewCell.swift */,
@@ -221,6 +227,7 @@
 				509D5433240FA1550095A91F /* LaunchScreen.storyboard in Resources */,
 				509D5430240FA1550095A91F /* Assets.xcassets in Resources */,
 				509D542B240FA1530095A91F /* Main.storyboard in Resources */,
+				50FD42B62410F49F00CBF467 /* AnswerCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -241,6 +248,7 @@
 				509D5428240FA1530095A91F /* ViewController.swift in Sources */,
 				509D5424240FA1530095A91F /* AppDelegate.swift in Sources */,
 				50FD42B02410E16800CBF467 /* DetailViewController.swift in Sources */,
+				50FD42B52410F49F00CBF467 /* AnswerCell.swift in Sources */,
 				509D5453240FDF440095A91F /* Session.swift in Sources */,
 				509D542E240FA1530095A91F /* StackOverflowLite.xcdatamodeld in Sources */,
 				509D5456240FDFBC0095A91F /* InspirationCell.swift in Sources */,
