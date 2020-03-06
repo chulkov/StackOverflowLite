@@ -16,6 +16,10 @@ class QuestionsColletionViewCellModel {
         return question.owner.displayName
     }
 
+    var userID: Int{
+        return question.owner.userID ?? 0
+    }
+    
     var tags: String {
         
         var tagsLabelText = ""

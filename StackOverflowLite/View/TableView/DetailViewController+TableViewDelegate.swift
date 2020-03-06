@@ -13,7 +13,9 @@ import UIKit
 
 extension DetailViewController  {
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        performSegue(withIdentifier: "profileSegue", sender: indexPath)
+        if indexPath.section == 1{
+            performSegue(withIdentifier: "profileSegue", sender: indexPath)
+        }
         tableView.deselectRow(at: indexPath, animated: true)
     }
 }

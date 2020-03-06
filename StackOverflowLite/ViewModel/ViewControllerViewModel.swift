@@ -58,11 +58,14 @@ class ViewControllerViewModel: NSObject {
             }
             
         }
-        
-
+    }
+    public func getUser(userID: Int, completion: ((User) -> ())?){
+        networking.performNetworkTask(endpoint: StackOverflowAPI.user(userID: userID), type: User.self) { (response) in
+            completion?(response)
+        }
     }
     
-// MARK: Prepare cells
+    // MARK: Prepare cells
     public func cellCollectionViewModel(index: Int) -> QuestionsColletionViewCellModel? {
         guard let questions = questions?.items?[index] else { return nil }
         let questionsColletionViewCellModel = QuestionsColletionViewCellModel(question: questions)

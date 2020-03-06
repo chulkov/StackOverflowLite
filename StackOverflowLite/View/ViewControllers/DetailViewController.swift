@@ -18,6 +18,7 @@ class DetailViewController: UITableViewController {
     @IBOutlet weak var questionBodyLabel: UILabel!
     @IBOutlet weak var tagsLabel: UILabel!
     @IBOutlet weak var avatarImage: UIImageView!
+    @IBOutlet weak var authorStackView: UIStackView!
     
     // MARK: Properties
     public var questionsViewModel: QuestionsColletionViewCellModel?
@@ -46,12 +47,26 @@ class DetailViewController: UITableViewController {
                 self.tableView.reloadData()
             }
         }
+        
+        
+        let recognizer = UITapGestureRecognizer(target: self, action: #selector(self.authorViewTap(recognizer:)))
+        authorStackView.addGestureRecognizer(recognizer)
+        
+    }
+    @objc
+    func authorViewTap(recognizer: UITapGestureRecognizer) {
+        let storyBoard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
+        let profileViewController = storyBoard.instantiateViewController(withIdentifier: "profileViewController") as! ProfileViewController
+        profileViewController.modalPresentationStyle = .fullScreen
+        profileViewController.userID = questionsViewModel?.userID
+        self.navigationController?.pushViewController(profileViewController, animated: true)
     }
     
+    
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-
+        
         if segue.identifier == "profileSegue" {
-
+            
             if let destinationViewController = segue.destination as? ProfileViewController
             {
                 let indexPath = self.tableView.indexPathForSelectedRow!
@@ -60,6 +75,6 @@ class DetailViewController: UITableViewController {
                 //destinationViewController.test = "index: \(index)"
             }
         }
-
+        
     }
 }

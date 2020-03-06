@@ -129,7 +129,7 @@
         <!--Profile-->
         <scene sceneID="UyH-pq-xEm">
             <objects>
-                <viewController id="LNB-SV-AzD" customClass="ProfileViewController" customModule="StackOverflowLite" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="profileViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="LNB-SV-AzD" customClass="ProfileViewController" customModule="StackOverflowLite" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="shQ-nm-izC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -283,7 +283,7 @@
                         <sections>
                             <tableViewSection headerTitle="Question" id="uaz-Ka-dCE">
                                 <cells>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="140" id="gu6-FO-9od">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="QuestionCell" rowHeight="140" id="gu6-FO-9od">
                                         <rect key="frame" x="0.0" y="28" width="414" height="140"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="gu6-FO-9od" id="7cw-TG-zpe">
@@ -438,6 +438,7 @@
                     <navigationItem key="navigationItem" id="2DX-wG-dj7"/>
                     <connections>
                         <outlet property="authorNameLabel" destination="Brh-gU-3Zx" id="X4M-7f-5zi"/>
+                        <outlet property="authorStackView" destination="HC2-Jd-NEd" id="ALD-NZ-iQv"/>
                         <outlet property="avatarImage" destination="Dm5-sd-pe9" id="Y58-fL-LLO"/>
                         <outlet property="questionBodyLabel" destination="JdZ-dy-NOt" id="3YG-Lk-Vcc"/>
                         <outlet property="scoreLabel" destination="dQD-nN-wlc" id="Ezh-4A-91M"/>

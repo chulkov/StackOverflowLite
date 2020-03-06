@@ -25,18 +25,14 @@ class ProfileViewController: UIViewController {
     
     public let viewModel = ViewControllerViewModel()
     private var answerID : Int?
-    
+    public var userID : Int?
     private var activityIndicator: UIActivityIndicatorView!
+    
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        if let answersViewModel = answersViewModel{
-            answerID = answersViewModel.answerID
-        }
-        
         parentStackView.isHidden = true
-        
         activityIndicator = UIActivityIndicatorView(style: UIActivityIndicatorView.Style.large)
         activityIndicator.color = #colorLiteral(red: 0, green: 0, blue: 0, alpha: 1)
         activityIndicator.center = view.center
@@ -44,26 +40,29 @@ class ProfileViewController: UIViewController {
         activityIndicator.startAnimating()
         view.addSubview(activityIndicator)
         
-        
-        viewModel.getUserByAnswerID(answerID: answerID ?? 0) { (user) in
-            
-            DispatchQueue.main.async {
-                self.nameLabel.text = user.objects[0].displayName
-                self.avatarImageView.imageFromServerURL(urlString: user.objects[0].profileImage ?? "")
-                self.reputationLabel.text = String(user.objects[0].reputation ?? 0)
-                self.goldBadgeLabel.text = String(user.objects[0].badgeCounts.gold )
-                self.silverBadgeLabel.text = String(user.objects[0].badgeCounts.silver )
-                self.bronzeBadgeLabel.text = String(user.objects[0].badgeCounts.bronze )
-                self.activityIndicator.stopAnimating()
-                self.parentStackView.isHidden = false
+        if let answersViewModel = answersViewModel{
+            answerID = answersViewModel.answerID
+            viewModel.getUserByAnswerID(answerID: answerID ?? 0) { (user) in
+                DispatchQueue.main.async {
+                    self.updateUI(user: user)
+                }
             }
-            // print(user)
+        }else if let userID = userID{
+            viewModel.getUser(userID: userID) { (user) in
+                DispatchQueue.main.async {
+                    self.updateUI(user: user)
+                }
+            }
         }
-        
-        
-        
-        
-        
     }
-    
+    fileprivate func updateUI(user: User) {
+        self.nameLabel.text = user.objects[0].displayName
+        self.avatarImageView.imageFromServerURL(urlString: user.objects[0].profileImage ?? "")
+        self.reputationLabel.text = String(user.objects[0].reputation ?? 0)
+        self.goldBadgeLabel.text = String(user.objects[0].badgeCounts.gold )
+        self.silverBadgeLabel.text = String(user.objects[0].badgeCounts.silver )
+        self.bronzeBadgeLabel.text = String(user.objects[0].badgeCounts.bronze )
+        self.activityIndicator.stopAnimating()
+        self.parentStackView.isHidden = false
+    }
 }
