@@ -12,6 +12,8 @@
 		503D929724114BE700808B38 /* AnswersTableViewCellModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 503D929624114BE700808B38 /* AnswersTableViewCellModel.swift */; };
 		503D929924122D7700808B38 /* DetailViewController+TableViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 503D929824122D7700808B38 /* DetailViewController+TableViewDelegate.swift */; };
 		503D929F24122FA900808B38 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 503D929E24122FA900808B38 /* ProfileViewController.swift */; };
+		503D92A12412416600808B38 /* AnswerInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 503D92A02412416600808B38 /* AnswerInfo.swift */; };
+		503D92A32412435E00808B38 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 503D92A22412435E00808B38 /* User.swift */; };
 		509D5424240FA1530095A91F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 509D5423240FA1530095A91F /* AppDelegate.swift */; };
 		509D5426240FA1530095A91F /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 509D5425240FA1530095A91F /* SceneDelegate.swift */; };
 		509D5428240FA1530095A91F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 509D5427240FA1530095A91F /* ViewController.swift */; };
@@ -42,6 +44,8 @@
 		503D929624114BE700808B38 /* AnswersTableViewCellModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnswersTableViewCellModel.swift; sourceTree = "<group>"; };
 		503D929824122D7700808B38 /* DetailViewController+TableViewDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DetailViewController+TableViewDelegate.swift"; sourceTree = "<group>"; };
 		503D929E24122FA900808B38 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
+		503D92A02412416600808B38 /* AnswerInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnswerInfo.swift; sourceTree = "<group>"; };
+		503D92A22412435E00808B38 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		509D5420240FA1530095A91F /* StackOverflowLite.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = StackOverflowLite.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		509D5423240FA1530095A91F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		509D5425240FA1530095A91F /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -179,6 +183,8 @@
 				509D542C240FA1530095A91F /* StackOverflowLite.xcdatamodeld */,
 				509D5465241009900095A91F /* Question.swift */,
 				503D92942411375600808B38 /* Answer.swift */,
+				503D92A02412416600808B38 /* AnswerInfo.swift */,
+				503D92A22412435E00808B38 /* User.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -285,10 +291,12 @@
 				509D5462241007E70095A91F /* EndpointType.swift in Sources */,
 				509D5466241009900095A91F /* Question.swift in Sources */,
 				509D543B240FA1D10095A91F /* ViewControllerViewModel.swift in Sources */,
+				503D92A32412435E00808B38 /* User.swift in Sources */,
 				503D929724114BE700808B38 /* AnswersTableViewCellModel.swift in Sources */,
 				503D92952411375600808B38 /* Answer.swift in Sources */,
 				509D546824100A490095A91F /* Response.swift in Sources */,
 				503D929F24122FA900808B38 /* ProfileViewController.swift in Sources */,
+				503D92A12412416600808B38 /* AnswerInfo.swift in Sources */,
 				509D545A240FE0B80095A91F /* UIImage+Decompression.swift in Sources */,
 				509D5464241007E70095A91F /* Networking.swift in Sources */,
 				509D5441240FB17F0095A91F /* CustomCollectionViewCell.swift in Sources */,
@@ -451,6 +459,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = Z7KA64TA2D;
 				INFOPLIST_FILE = StackOverflowLite/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -469,6 +478,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = Z7KA64TA2D;
 				INFOPLIST_FILE = StackOverflowLite/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

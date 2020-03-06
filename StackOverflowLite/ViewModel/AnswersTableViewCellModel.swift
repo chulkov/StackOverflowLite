@@ -19,4 +19,7 @@ class AnswersTableViewCellModel {
     var body: String {
         return answer.body
     }
+    var answerID: Int {
+        return answer.answerID
+    }
 }

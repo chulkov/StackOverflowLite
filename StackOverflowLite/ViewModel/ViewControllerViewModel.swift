@@ -14,13 +14,13 @@ import UIKit
 class ViewControllerViewModel: NSObject {
     
     private let networking = Networking()
-    
     private var questions: Question?
-    
     private var answers: Answer?
+    private var answerInfo: AnswerInfo?
+    public var user: User?
+    
     
     weak var customDelegate: CustomCollectionViewDelegate?
-    //let inspirations = Inspiration.allInspirations()
     
     //MARK: API Requests
     public func getQuestions(completion: (() -> Void)?) {
@@ -40,14 +40,32 @@ class ViewControllerViewModel: NSObject {
         }
     }
     
-//    public func getAnswer(answerID: Int, completion: (() -> Voud)?){
-//        networking.performNetworkTask(endpoint: StackOverflowAPI.answer(answerID: answerID), type: , completion: <#T##((Decodable & Encodable) -> Void)?##((Decodable & Encodable) -> Void)?##(Decodable & Encodable) -> Void#>)
-//    }
+    public func getAnswer(answerID: Int, completion: (() -> Void)?){
+        networking.performNetworkTask(endpoint: StackOverflowAPI.answer(answerID: answerID), type: AnswerInfo.self) { [weak self] (response) in
+            self?.answerInfo = response
+            completion?()
+        }
+    }
+    
+    public func getUserByAnswerID(answerID: Int, completion: ((User) -> ())?){
+        
+        networking.performNetworkTask(endpoint: StackOverflowAPI.answer(answerID: answerID), type: AnswerInfo.self) { [weak self] (response) in
+            self?.answerInfo = response
+            self?.networking.performNetworkTask(endpoint: StackOverflowAPI.user(userID: self?.answerInfo?.elements[0].owner.userID ?? 0), type: User.self) { (response) in
+                //self?.user = response
+                //print(response)
+                completion?(response)
+            }
+            
+        }
+        
+
+    }
     
 // MARK: Prepare cells
     public func cellCollectionViewModel(index: Int) -> QuestionsColletionViewCellModel? {
-        guard let questions = questions else { return nil }
-        let questionsColletionViewCellModel = QuestionsColletionViewCellModel(question: questions.items[index]) //RepoTableViewCellModel(repo: repos.items[index])
+        guard let questions = questions?.items?[index] else { return nil }
+        let questionsColletionViewCellModel = QuestionsColletionViewCellModel(question: questions)
         return questionsColletionViewCellModel
     }
     
@@ -57,6 +75,7 @@ class ViewControllerViewModel: NSObject {
         let answersTableViewCellModel = AnswersTableViewCellModel(answer: answer)
         return answersTableViewCellModel
     }
+    
     
     public var answersCount: Int {
         guard let answer = answers?.payload[0].answers else { return 0}
@@ -68,7 +87,8 @@ class ViewControllerViewModel: NSObject {
 //MARK: CollectionView Data Source
 extension ViewControllerViewModel: UICollectionViewDataSource{
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return questions?.items.count ?? 0
+        guard let questions = questions?.items else { return 0 }
+        return questions.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
@@ -121,7 +141,6 @@ extension UIImageView {
         URLSession.shared.dataTask(with: NSURL(string: urlString)! as URL, completionHandler: { (data, response, error) -> Void in
             
             if error != nil {
-                print(error)
                 return
             }
             DispatchQueue.main.async(execute: { () -> Void in

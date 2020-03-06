@@ -43,7 +43,6 @@ class DetailViewController: UITableViewController {
         
         viewModel.getAnswers(questionID: questionID ?? 0) {
             DispatchQueue.main.async {
-                print("answers Loaded")
                 self.tableView.reloadData()
             }
         }
@@ -57,8 +56,8 @@ class DetailViewController: UITableViewController {
             {
                 let indexPath = self.tableView.indexPathForSelectedRow!
                 let index = indexPath.row
-                //destinationViewController.test = viewModel.cel
-                destinationViewController.test = "index: \(index)"
+                destinationViewController.answersViewModel = viewModel.cellTableViewModel(index: index)
+                //destinationViewController.test = "index: \(index)"
             }
         }
 
