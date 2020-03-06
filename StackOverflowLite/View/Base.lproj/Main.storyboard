@@ -129,7 +129,7 @@
         <!--Profile-->
         <scene sceneID="UyH-pq-xEm">
             <objects>
-                <viewController id="LNB-SV-AzD" sceneMemberID="viewController">
+                <viewController id="LNB-SV-AzD" customClass="ProfileViewController" customModule="StackOverflowLite" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="shQ-nm-izC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -140,7 +140,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="BOn-1m-QW6" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2850" y="143"/>
+            <point key="canvasLocation" x="2858" y="139"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="hXu-34-4Ss">
@@ -331,11 +331,12 @@
                         <outlet property="scoreLabel" destination="dQD-nN-wlc" id="Ezh-4A-91M"/>
                         <outlet property="tagsLabel" destination="bV3-WI-UHw" id="Dfg-mB-lEQ"/>
                         <outlet property="titleLabel" destination="cMx-K8-QFI" id="8Vr-Ky-WSD"/>
+                        <segue destination="LNB-SV-AzD" kind="show" identifier="profileSegue" id="Cp2-qz-vZ3"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ec2-Fz-edA" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1928.985507246377" y="128.57142857142856"/>
+            <point key="canvasLocation" x="1929" y="139"/>
         </scene>
     </scenes>
     <resources>

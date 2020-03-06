@@ -10,6 +10,8 @@
 		503D92932411221300808B38 /* DetailViewController+TableViewDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 503D92922411221300808B38 /* DetailViewController+TableViewDataSource.swift */; };
 		503D92952411375600808B38 /* Answer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 503D92942411375600808B38 /* Answer.swift */; };
 		503D929724114BE700808B38 /* AnswersTableViewCellModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 503D929624114BE700808B38 /* AnswersTableViewCellModel.swift */; };
+		503D929924122D7700808B38 /* DetailViewController+TableViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 503D929824122D7700808B38 /* DetailViewController+TableViewDelegate.swift */; };
+		503D929F24122FA900808B38 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 503D929E24122FA900808B38 /* ProfileViewController.swift */; };
 		509D5424240FA1530095A91F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 509D5423240FA1530095A91F /* AppDelegate.swift */; };
 		509D5426240FA1530095A91F /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 509D5425240FA1530095A91F /* SceneDelegate.swift */; };
 		509D5428240FA1530095A91F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 509D5427240FA1530095A91F /* ViewController.swift */; };
@@ -20,7 +22,6 @@
 		509D543B240FA1D10095A91F /* ViewControllerViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 509D543A240FA1D10095A91F /* ViewControllerViewModel.swift */; };
 		509D5441240FB17F0095A91F /* CustomCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 509D5440240FB17F0095A91F /* CustomCollectionViewCell.swift */; };
 		509D5443240FB2260095A91F /* CustomCollectionViewLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 509D5442240FB2260095A91F /* CustomCollectionViewLayout.swift */; };
-		509D5453240FDF440095A91F /* Session.swift in Sources */ = {isa = PBXBuildFile; fileRef = 509D5451240FDF440095A91F /* Session.swift */; };
 		509D5456240FDFBC0095A91F /* InspirationCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 509D5455240FDFBC0095A91F /* InspirationCell.swift */; };
 		509D5459240FE0B80095A91F /* UIColor+Palette.swift in Sources */ = {isa = PBXBuildFile; fileRef = 509D5457240FE0B70095A91F /* UIColor+Palette.swift */; };
 		509D545A240FE0B80095A91F /* UIImage+Decompression.swift in Sources */ = {isa = PBXBuildFile; fileRef = 509D5458240FE0B70095A91F /* UIImage+Decompression.swift */; };
@@ -39,6 +40,8 @@
 		503D92922411221300808B38 /* DetailViewController+TableViewDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DetailViewController+TableViewDataSource.swift"; sourceTree = "<group>"; };
 		503D92942411375600808B38 /* Answer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Answer.swift; sourceTree = "<group>"; };
 		503D929624114BE700808B38 /* AnswersTableViewCellModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnswersTableViewCellModel.swift; sourceTree = "<group>"; };
+		503D929824122D7700808B38 /* DetailViewController+TableViewDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DetailViewController+TableViewDelegate.swift"; sourceTree = "<group>"; };
+		503D929E24122FA900808B38 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		509D5420240FA1530095A91F /* StackOverflowLite.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = StackOverflowLite.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		509D5423240FA1530095A91F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		509D5425240FA1530095A91F /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -51,7 +54,6 @@
 		509D543A240FA1D10095A91F /* ViewControllerViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerViewModel.swift; sourceTree = "<group>"; };
 		509D5440240FB17F0095A91F /* CustomCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomCollectionViewCell.swift; sourceTree = "<group>"; };
 		509D5442240FB2260095A91F /* CustomCollectionViewLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomCollectionViewLayout.swift; sourceTree = "<group>"; };
-		509D5451240FDF440095A91F /* Session.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Session.swift; sourceTree = "<group>"; };
 		509D5455240FDFBC0095A91F /* InspirationCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InspirationCell.swift; sourceTree = "<group>"; };
 		509D5457240FE0B70095A91F /* UIColor+Palette.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIColor+Palette.swift"; sourceTree = "<group>"; };
 		509D5458240FE0B70095A91F /* UIImage+Decompression.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIImage+Decompression.swift"; sourceTree = "<group>"; };
@@ -77,6 +79,44 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		503D929A24122EC400808B38 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				509D5427240FA1530095A91F /* ViewController.swift */,
+				50FD42AF2410E16800CBF467 /* DetailViewController.swift */,
+				503D929E24122FA900808B38 /* ProfileViewController.swift */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		503D929B24122ED700808B38 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				509D5455240FDFBC0095A91F /* InspirationCell.swift */,
+				509D5440240FB17F0095A91F /* CustomCollectionViewCell.swift */,
+				50FD42B32410F49F00CBF467 /* AnswerCell.swift */,
+				50FD42B42410F49F00CBF467 /* AnswerCell.xib */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
+		503D929C24122EEC00808B38 /* TableView */ = {
+			isa = PBXGroup;
+			children = (
+				503D92922411221300808B38 /* DetailViewController+TableViewDataSource.swift */,
+				503D929824122D7700808B38 /* DetailViewController+TableViewDelegate.swift */,
+			);
+			path = TableView;
+			sourceTree = "<group>";
+		};
+		503D929D24122F0500808B38 /* CollectionView */ = {
+			isa = PBXGroup;
+			children = (
+				509D5442240FB2260095A91F /* CustomCollectionViewLayout.swift */,
+			);
+			path = CollectionView;
+			sourceTree = "<group>";
+		};
 		509D5417240FA1530095A91F = {
 			isa = PBXGroup;
 			children = (
@@ -123,15 +163,11 @@
 		509D543D240FA1ED0095A91F /* View */ = {
 			isa = PBXGroup;
 			children = (
-				50FD42B32410F49F00CBF467 /* AnswerCell.swift */,
-				50FD42B42410F49F00CBF467 /* AnswerCell.xib */,
+				503D929D24122F0500808B38 /* CollectionView */,
+				503D929C24122EEC00808B38 /* TableView */,
+				503D929B24122ED700808B38 /* Cell */,
+				503D929A24122EC400808B38 /* ViewControllers */,
 				509D5429240FA1530095A91F /* Main.storyboard */,
-				509D5427240FA1530095A91F /* ViewController.swift */,
-				509D5440240FB17F0095A91F /* CustomCollectionViewCell.swift */,
-				509D5442240FB2260095A91F /* CustomCollectionViewLayout.swift */,
-				509D5455240FDFBC0095A91F /* InspirationCell.swift */,
-				50FD42AF2410E16800CBF467 /* DetailViewController.swift */,
-				503D92922411221300808B38 /* DetailViewController+TableViewDataSource.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -139,10 +175,9 @@
 		509D543E240FA1FE0095A91F /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				509D5451240FDF440095A91F /* Session.swift */,
-				509D5465241009900095A91F /* Question.swift */,
 				509D546724100A490095A91F /* Response.swift */,
 				509D542C240FA1530095A91F /* StackOverflowLite.xcdatamodeld */,
+				509D5465241009900095A91F /* Question.swift */,
 				503D92942411375600808B38 /* Answer.swift */,
 			);
 			path = Model;
@@ -253,6 +288,7 @@
 				503D929724114BE700808B38 /* AnswersTableViewCellModel.swift in Sources */,
 				503D92952411375600808B38 /* Answer.swift in Sources */,
 				509D546824100A490095A91F /* Response.swift in Sources */,
+				503D929F24122FA900808B38 /* ProfileViewController.swift in Sources */,
 				509D545A240FE0B80095A91F /* UIImage+Decompression.swift in Sources */,
 				509D5464241007E70095A91F /* Networking.swift in Sources */,
 				509D5441240FB17F0095A91F /* CustomCollectionViewCell.swift in Sources */,
@@ -260,8 +296,8 @@
 				509D5424240FA1530095A91F /* AppDelegate.swift in Sources */,
 				50FD42B02410E16800CBF467 /* DetailViewController.swift in Sources */,
 				50FD42B52410F49F00CBF467 /* AnswerCell.swift in Sources */,
-				509D5453240FDF440095A91F /* Session.swift in Sources */,
 				503D92932411221300808B38 /* DetailViewController+TableViewDataSource.swift in Sources */,
+				503D929924122D7700808B38 /* DetailViewController+TableViewDelegate.swift in Sources */,
 				509D542E240FA1530095A91F /* StackOverflowLite.xcdatamodeld in Sources */,
 				509D5456240FDFBC0095A91F /* InspirationCell.swift in Sources */,
 				509D546A24100D5A0095A91F /* QuestionsColletionViewCellModel.swift in Sources */,

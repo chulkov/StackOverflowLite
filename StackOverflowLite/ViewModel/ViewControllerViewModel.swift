@@ -22,7 +22,7 @@ class ViewControllerViewModel: NSObject {
     weak var customDelegate: CustomCollectionViewDelegate?
     //let inspirations = Inspiration.allInspirations()
     
-    
+    //MARK: API Requests
     public func getQuestions(completion: (() -> Void)?) {
         networking.performNetworkTask(endpoint: StackOverflowAPI.questions,
                                       type: Question.self) { [weak self] (response) in
@@ -40,7 +40,11 @@ class ViewControllerViewModel: NSObject {
         }
     }
     
+//    public func getAnswer(answerID: Int, completion: (() -> Voud)?){
+//        networking.performNetworkTask(endpoint: StackOverflowAPI.answer(answerID: answerID), type: , completion: <#T##((Decodable & Encodable) -> Void)?##((Decodable & Encodable) -> Void)?##(Decodable & Encodable) -> Void#>)
+//    }
     
+// MARK: Prepare cells
     public func cellCollectionViewModel(index: Int) -> QuestionsColletionViewCellModel? {
         guard let questions = questions else { return nil }
         let questionsColletionViewCellModel = QuestionsColletionViewCellModel(question: questions.items[index]) //RepoTableViewCellModel(repo: repos.items[index])
@@ -61,8 +65,7 @@ class ViewControllerViewModel: NSObject {
 }
 
 
-
-
+//MARK: CollectionView Data Source
 extension ViewControllerViewModel: UICollectionViewDataSource{
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return questions?.items.count ?? 0
@@ -77,17 +80,17 @@ extension ViewControllerViewModel: UICollectionViewDataSource{
         cell.viewModel = cellCollectionViewModel(index: indexPath.row)
         return cell
     }
-    
-    
 }
+//MARK: CollectionView Delegate
 extension ViewControllerViewModel: UICollectionViewDelegate{
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         collectionView.selectItem(at: indexPath, animated: true, scrollPosition: .bottom)
     }
 }
 
+
+// MARK: String extensions
 extension NSAttributedString {
-    
     convenience init(htmlString html: String) throws {
         try self.init(data: Data(html.utf8), options: [
             .documentType: NSAttributedString.DocumentType.html,

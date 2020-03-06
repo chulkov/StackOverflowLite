@@ -48,4 +48,19 @@ class DetailViewController: UITableViewController {
             }
         }
     }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+
+        if segue.identifier == "profileSegue" {
+
+            if let destinationViewController = segue.destination as? ProfileViewController
+            {
+                let indexPath = self.tableView.indexPathForSelectedRow!
+                let index = indexPath.row
+                //destinationViewController.test = viewModel.cel
+                destinationViewController.test = "index: \(index)"
+            }
+        }
+
+    }
 }

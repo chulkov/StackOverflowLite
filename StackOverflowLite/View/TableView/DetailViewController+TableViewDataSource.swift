@@ -49,10 +49,6 @@ extension DetailViewController  {
     
     
     override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-//        if indexPath.section == 1 {
-//            return 44
-//        }
-//        return super.tableView(tableView, heightForRowAt: indexPath)
         return UITableView.automaticDimension
     }
 }

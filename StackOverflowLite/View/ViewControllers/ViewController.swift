@@ -11,13 +11,10 @@ import UIKit
 class ViewController: UIViewController {
     
     //MARK: IBOutlets
+    @IBOutlet weak var collectionView: UICollectionView!
     
     //MARK: Properties
-    
-    
-    
     fileprivate let viewModel = ViewControllerViewModel()
-    @IBOutlet weak var collectionView: UICollectionView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -34,7 +31,7 @@ class ViewController: UIViewController {
                 self.collectionView.reloadData()
             }
         }
-
+        
     }
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         
@@ -49,12 +46,4 @@ class ViewController: UIViewController {
         }
         
     }
-    
-    //MARK: IBActions
-    
-    
-    
-    //MARK: Update UI
-    
-    //from ViewModel
 }
