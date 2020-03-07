@@ -40,14 +40,18 @@ class InspirationCell: UICollectionViewCell, UICollectionViewDataSource, UIColle
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         var cell = collectionView.dequeueReusableCell(withReuseIdentifier: "TagCell", for: indexPath) as! TagCell
+        //print("indexpath: \(indexPath)  indexpath.row: \(indexPath.row) ")
+        
         self.configureCell(cell: cell, forIndexPath: indexPath as NSIndexPath)
         return cell
 
     }
     func configureCell(cell: TagCell, forIndexPath indexPath: NSIndexPath) {
-        
-      let tag = tags[indexPath.row]
-        cell.tagLabel.text = tag
+        if indexPath.row < tags.count  {
+            let tag = tags[indexPath.row]
+            cell.tagLabel.text = tag
+        }
+      
         
         var height = tagColletionView.collectionViewLayout.collectionViewContentSize.height
         tagCollectionViewHeightConstraint.constant = height

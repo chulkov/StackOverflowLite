@@ -26,7 +26,7 @@ struct Question: Codable {
 struct Item: Codable {
     let tags: [String]
     let owner: Owner
-    let isAnswered: Bool
+    let isAnswered: Bool?
     let viewCount, answerCount, score, lastActivityDate: Int
     let creationDate: Int
     let lastEditDate: Int?

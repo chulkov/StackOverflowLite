@@ -69,17 +69,18 @@ class ViewControllerViewModel: NSObject {
     
     
     
+// MARK: Tags collectionView
     
     func collectionView(collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-      return TAGS.count
+        return TAGS.count
     }
-
+    
     func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "TagCell", for: indexPath as IndexPath) as! TagCell
         self.configureCell(cell: cell, forIndexPath: indexPath)
-      return cell
+        return cell
     }
-
+    
     func configureCell(cell: TagCell, forIndexPath indexPath: NSIndexPath) {
         let tag = TAGS[indexPath.row]
         cell.tagLabel.text = tag
@@ -127,6 +128,20 @@ extension ViewControllerViewModel: UICollectionViewDataSource{
         cell.viewModel = cellCollectionViewModel(index: indexPath.row)
         return cell
     }
+    
+//    func collectionView(_ collectionView: UICollectionView, viewForSupplementaryElementOfKind kind: String, at indexPath: IndexPath) -> UICollectionReusableView {
+//        
+//        var supplementaryView = collectionView.dequeueReusableSupplementaryView(ofKind: kind, withReuseIdentifier:"Header", for: indexPath) as UICollectionReusableView
+//        
+//        supplementaryView.backgroundColor = UIColor.blue
+//        return supplementaryView
+//
+//    }
+//    @objc func collectionView(_ collectionView: UICollectionView, layout  collectionViewLayout: UICollectionViewLayout, referenceSizeForHeaderInSection section: Int) -> CGSize{
+//        let size = CGSize(width: 400, height: 50)
+//        return size
+//    }
+    
 }
 //MARK: CollectionView Delegate
 extension ViewControllerViewModel: UICollectionViewDelegate{

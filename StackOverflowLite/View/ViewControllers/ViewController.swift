@@ -15,6 +15,18 @@ class ViewController: UIViewController {
     //MARK: Properties
     fileprivate let viewModel = ViewControllerViewModel()
     
+    var refresher: UIRefreshControl!
+    
+    fileprivate func getQuestions() {
+        viewModel.getQuestions {
+            DispatchQueue.main.async {
+                self.collectionView.reloadData()
+            }
+        }
+    }
+    
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -22,15 +34,33 @@ class ViewController: UIViewController {
         let layout = collectionView.collectionViewLayout as? CustomCollectionViewLayout
         layout?.delegate = viewModel as? CustomCollectionViewDelegate
         
+        getQuestions()
         
+        self.refresher = UIRefreshControl()
+        self.collectionView!.alwaysBounceVertical = true
+        self.refresher.tintColor = UIColor.red
+        self.refresher.addTarget(self, action: #selector(didPullToRefresh(_:)), for: .valueChanged)
+        //self.collectionView!.addSubview(refresher)
+        collectionView.refreshControl = refresher
+        
+    }
+    
+    
+    @objc
+    private func didPullToRefresh(_ sender: Any) {
         viewModel.getQuestions {
             DispatchQueue.main.async {
-                //self?.tableView.reloadData()
                 self.collectionView.reloadData()
+                self.refresher.endRefreshing()
             }
         }
         
     }
+    
+    
+    
+    
+    
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         
         if segue.identifier == "DetailSegue" {
