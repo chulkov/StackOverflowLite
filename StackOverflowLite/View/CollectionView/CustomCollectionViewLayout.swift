@@ -4,7 +4,7 @@ import UIKit
 struct UltravisualLayoutConstants {
   struct Cell {
     // The height of the non-featured cell
-    static let standardHeight: CGFloat = 100
+    static let standardHeight: CGFloat = 70//100
     // The height of the first visible cell
     static let featuredHeight: CGFloat = 280
   }

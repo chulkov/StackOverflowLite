@@ -13,6 +13,7 @@ class InspirationCell: UICollectionViewCell, UICollectionViewDataSource, UIColle
     
     @IBOutlet weak var tagColletionView: UICollectionView!
     
+    @IBOutlet weak var tagCollectionViewHeightConstraint: NSLayoutConstraint!
     public var viewModel: QuestionsColletionViewCellModel? {
         didSet {
             guard let viewModel = viewModel else { return }
@@ -31,9 +32,11 @@ class InspirationCell: UICollectionViewCell, UICollectionViewDataSource, UIColle
         }
     }
     
+    
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return tags.count
     }
+    
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         var cell = collectionView.dequeueReusableCell(withReuseIdentifier: "TagCell", for: indexPath) as! TagCell
@@ -42,8 +45,12 @@ class InspirationCell: UICollectionViewCell, UICollectionViewDataSource, UIColle
 
     }
     func configureCell(cell: TagCell, forIndexPath indexPath: NSIndexPath) {
+        
       let tag = tags[indexPath.row]
         cell.tagLabel.text = tag
+        
+        var height = tagColletionView.collectionViewLayout.collectionViewContentSize.height
+        tagCollectionViewHeightConstraint.constant = height
     }
     
     
@@ -62,5 +69,7 @@ class InspirationCell: UICollectionViewCell, UICollectionViewDataSource, UIColle
         authorNameLabel.alpha = delta
         
         tagColletionView.alpha = delta
+        
+
     }
 }
