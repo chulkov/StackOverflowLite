@@ -32,7 +32,7 @@ class DetailViewController: UITableViewController {
             titleLabel.text = questionsViewModel.title.stripOutHtml()
             scoreLabel.text = questionsViewModel.score
             questionBodyLabel.attributedText =  try? NSAttributedString(htmlString: questionsViewModel.body)
-            tagsLabel.text = questionsViewModel.tags
+            //tagsLabel.text = questionsViewModel.tags
             authorNameLabel.text = questionsViewModel.ownerName
             avatarImage.imageFromServerURL(urlString: questionsViewModel.profileImageURL)
             questionID = questionsViewModel.questionID

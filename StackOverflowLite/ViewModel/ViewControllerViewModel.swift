@@ -18,7 +18,7 @@ class ViewControllerViewModel: NSObject {
     private var answers: Answer?
     private var answerInfo: AnswerInfo?
     public var user: User?
-    
+    let TAGS = ["Tech", "Design", "Humor", "Travel", "Music", "Writing", "Social Media", "Life", "Education", "Edtech", "Education Reform", "Photography", "Startup", "Poetry", "Women In Tech", "Female Founders", "Business", "Fiction", "Love", "Food", "Sports"]
     
     weak var customDelegate: CustomCollectionViewDelegate?
     
@@ -64,6 +64,30 @@ class ViewControllerViewModel: NSObject {
             completion?(response)
         }
     }
+    
+    
+    
+    
+    
+    
+    func collectionView(collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+      return TAGS.count
+    }
+
+    func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell {
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "TagCell", for: indexPath as IndexPath) as! TagCell
+        self.configureCell(cell: cell, forIndexPath: indexPath)
+      return cell
+    }
+
+    func configureCell(cell: TagCell, forIndexPath indexPath: NSIndexPath) {
+        let tag = TAGS[indexPath.row]
+        cell.tagLabel.text = tag
+    }
+    
+    
+    
+    
     
     // MARK: Prepare cells
     public func cellCollectionViewModel(index: Int) -> QuestionsColletionViewCellModel? {

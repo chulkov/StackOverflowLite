@@ -20,7 +20,7 @@ class QuestionsColletionViewCellModel {
         return question.owner.userID ?? 0
     }
     
-    var tags: String {
+    var tagsInOneString: String {
         
         var tagsLabelText = ""
         for tag in question.tags{
@@ -28,6 +28,10 @@ class QuestionsColletionViewCellModel {
         }
         
         return String(tagsLabelText.dropLast(2))
+    }
+    var tagsArray: [String] {
+
+        return question.tags
     }
 
     var profileImageURL: String {

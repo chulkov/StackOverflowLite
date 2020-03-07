@@ -12,7 +12,6 @@ class ViewController: UIViewController {
     
     //MARK: IBOutlets
     @IBOutlet weak var collectionView: UICollectionView!
-    
     //MARK: Properties
     fileprivate let viewModel = ViewControllerViewModel()
     
@@ -22,7 +21,6 @@ class ViewController: UIViewController {
         collectionView.dataSource = viewModel
         let layout = collectionView.collectionViewLayout as? CustomCollectionViewLayout
         layout?.delegate = viewModel as? CustomCollectionViewDelegate
-        
         
         
         viewModel.getQuestions {

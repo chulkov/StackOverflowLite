@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		500BD54A2413871C000729E9 /* TagCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 500BD5482413871C000729E9 /* TagCell.swift */; };
+		500BD54B2413871C000729E9 /* TagCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 500BD5492413871C000729E9 /* TagCell.xib */; };
 		503D92932411221300808B38 /* DetailViewController+TableViewDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 503D92922411221300808B38 /* DetailViewController+TableViewDataSource.swift */; };
 		503D92952411375600808B38 /* Answer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 503D92942411375600808B38 /* Answer.swift */; };
 		503D929724114BE700808B38 /* AnswersTableViewCellModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 503D929624114BE700808B38 /* AnswersTableViewCellModel.swift */; };
@@ -39,6 +41,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		500BD5482413871C000729E9 /* TagCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TagCell.swift; sourceTree = "<group>"; };
+		500BD5492413871C000729E9 /* TagCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TagCell.xib; sourceTree = "<group>"; };
 		503D92922411221300808B38 /* DetailViewController+TableViewDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DetailViewController+TableViewDataSource.swift"; sourceTree = "<group>"; };
 		503D92942411375600808B38 /* Answer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Answer.swift; sourceTree = "<group>"; };
 		503D929624114BE700808B38 /* AnswersTableViewCellModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnswersTableViewCellModel.swift; sourceTree = "<group>"; };
@@ -100,6 +104,8 @@
 				509D5440240FB17F0095A91F /* CustomCollectionViewCell.swift */,
 				50FD42B32410F49F00CBF467 /* AnswerCell.swift */,
 				50FD42B42410F49F00CBF467 /* AnswerCell.xib */,
+				500BD5482413871C000729E9 /* TagCell.swift */,
+				500BD5492413871C000729E9 /* TagCell.xib */,
 			);
 			path = Cell;
 			sourceTree = "<group>";
@@ -275,6 +281,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				509D5433240FA1550095A91F /* LaunchScreen.storyboard in Resources */,
+				500BD54B2413871C000729E9 /* TagCell.xib in Resources */,
 				509D5430240FA1550095A91F /* Assets.xcassets in Resources */,
 				509D542B240FA1530095A91F /* Main.storyboard in Resources */,
 				50FD42B62410F49F00CBF467 /* AnswerCell.xib in Resources */,
@@ -296,6 +303,7 @@
 				503D92952411375600808B38 /* Answer.swift in Sources */,
 				509D546824100A490095A91F /* Response.swift in Sources */,
 				503D929F24122FA900808B38 /* ProfileViewController.swift in Sources */,
+				500BD54A2413871C000729E9 /* TagCell.swift in Sources */,
 				503D92A12412416600808B38 /* AnswerInfo.swift in Sources */,
 				509D545A240FE0B80095A91F /* UIImage+Decompression.swift in Sources */,
 				509D5464241007E70095A91F /* Networking.swift in Sources */,
