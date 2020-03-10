@@ -40,7 +40,6 @@ class ViewController: UIViewController {
         self.collectionView!.alwaysBounceVertical = true
         self.refresher.tintColor = UIColor.red
         self.refresher.addTarget(self, action: #selector(didPullToRefresh(_:)), for: .valueChanged)
-        //self.collectionView!.addSubview(refresher)
         collectionView.refreshControl = refresher
         
     }

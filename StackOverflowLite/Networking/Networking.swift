@@ -27,8 +27,7 @@ struct Networking {
             }
             let response = Response(data: data)
             guard let decoded = response.decode(type) else {
-              // TODO: show alert
-                //unit test
+              // TODO: show alert, unit test
                 print("error response decoding")
                 return
             }
